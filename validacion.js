@@ -2,6 +2,7 @@ let usuario = document.getElementById("usuario")
 let mensaje = document.getElementById("mensaje")
 let password = document.getElementById("password")
 let mensaje2 = document.getElementById("mensaje2")
+let contador = document.getElementById("contador")
 let form = document.querySelector("form")
 let toggle = document.getElementById("togglePassword")
 
@@ -31,6 +32,7 @@ usuario.addEventListener("input", function () {
 })
 
 password.addEventListener("input", function () {
+   contador.textContent = this.value.length
    if (this.value.length < 10) {
       mensaje2.textContent = "Contraseña debe tener al menos 10 caracteres"
       this.style.borderColor = "red"
