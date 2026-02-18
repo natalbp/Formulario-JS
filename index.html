@@ -5,15 +5,26 @@
     </script>
 <!-- margin bottom 3 -->
 <div class="container">
-    <div class="mb-3">
-        <label for="usuario" class="form-label">usuario:</label>
-        <input type="text" class="form-control" id="usuario">
-        <span id="mensaje" class="form-label"></span>
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">contraseña:</label>
-        <input type="password" class="form-control" id="password">
-    </div>
+    <form>
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario:</label>
+            <input type="text" class="form-control" id="usuario">
+            <span id="mensaje" class="form-label"></span>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group">
+                <input type="password" class="form-control" id="password" aria-describedby="togglePassword">
+                <button class="btn btn-outline-secondary" type="button" id="togglePassword">Mostrar</button>
+            </div>
+            <span id="mensaje2" class="form-label"></span>
+            <div class="cont">
+                Caracteres: <span id="contador">0</span>
+            </div>
+        </div>
+        <button id="submitBtn" type="submit" class="btn btn-dark">Enviar</button>
+        <div id="formMessage" class="mt-2"></div>
+    </form>
 </div>
 
 <script src="validacion.js"></script>
